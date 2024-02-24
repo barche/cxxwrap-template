@@ -3,7 +3,7 @@ using Test
 module ModFoo
     using CxxWrap
 
-    @wrapmodule joinpath("build", "lib", "libfoo")
+    @wrapmodule () -> joinpath("build", "lib", "libfoo")
 
     function __init__()
         @initcxx
